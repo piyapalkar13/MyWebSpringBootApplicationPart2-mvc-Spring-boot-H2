@@ -41,6 +41,10 @@ public class AlienControlletr {
 		Alien alien=repo.findById(aid).orElse(new Alien());
 		mv.setViewName("showAlien.jsp");
 		mv.addObject(alien);
+
+		System.out.println(repo.findByTech("java"));
+		System.out.println(repo.findByAidGreaterThan(102));
+		System.out.println(repo.findByTechSorted("java"));
 		return mv;
 		
 		
